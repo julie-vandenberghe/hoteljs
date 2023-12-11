@@ -1,0 +1,35 @@
+//Importer les fichiers partiels
+@use "reset";
+@use "variables" as v;
+@use "mixins" as m;
+
+
+h1 {
+    color: v.$color-primary;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+    @media screen and (max-width: v.$xs-breakpoint) {
+        font-size: 2rem;
+        text-align:center;
+    }
+}
+
+//Syntaxe imbriquée
+nav {
+    ul {
+        li {
+            display : inline-block;
+
+            a {
+                text-decoration : none;
+                color: v.$color-primary;
+
+                &:hover, &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
