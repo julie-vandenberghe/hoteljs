@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/477e17b079.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Hôtel JS</title>
 </head>
@@ -18,12 +20,55 @@
     </header>
     <section id="newClient">
         <!-- Bannière accueil nouveau client -->
-        <!-- FORMULAIRE accueil nouveau client -->
+        <!-- FORM accueil nouveau client -->
+        <h2>Accueil nouveau client</h2>
+        <form id="formNewClient">
+            <div>
+                <label for="prenom">Prénom</label><br>
+                <input type="text" id="prenom" name="prenom">
+            </div> 
+            <div>
+                <label for="nom">Nom</label><br>
+                <input type="text" id="nom" name="nom">
+            </div>
+            <div>
+                <label for="nuits">Nombre de nuits</label><br>
+                <input type="number" id="nuits" name="nuits" min="1" max="10">
+            </div>
+            <div>
+                <label for="chambre-select">Chambre</label><br>
+                <select name="chambres" id="chambre-select">
+                    <option value="chambre-1">Chambre 1 personne</option>
+                    <option value="chambre-2">Chambre 2 personnes</option>
+                    <option value="chambre-4">Chambre 4 personnes</option>
+                    <option value="loft">Loft</option>
+                </select>
+            </div>
+            <div>
+                <label>Petit déjeuner ?</label><br>
+                <input type="radio" id="oui" name="petit_dej" value="oui">
+                <label for="oui">Oui</label><br>
+                <input type="radio" id="non" name="petit_dej" value="non">
+                <label for="non">Non</label>
+            </div>
+            <button type="submit">Enregistrer le client <i class="fa-solid fa-calendar"></i></button>
+        </form>
     </section>
     <section id="checkoutClient">
         <!-- Bannière départ nouveau client -->
-        <!-- FORM départ nouveau client --> 
-        cool salut chat
+        <!-- FORM départ nouveau client -->
+        <h2>Départ client</h2>
+        <form id="formCheckoutClient">
+           
+                <label for="prenom">Prénom</label><br>
+                <input type="text" id="prenom" name="prenom">
+            
+            <div>
+                <label for="nom">Nom</label><br>
+                <input type="text" id="nom" name="nom">
+            </div>
+            <button type="submit">Rechercher <i class="fa-solid fa-user"></i></i></button>
+        </form>
     </section>
 </body>
 </html>
