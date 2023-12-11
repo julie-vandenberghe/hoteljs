@@ -14,6 +14,11 @@ body {
 
 body {
   background-color: #333333;
+  color: white;
+}
+
+nav ul {
+  background-color: #b89470;
 }
 
 /*# sourceMappingURL=main.css.map */
