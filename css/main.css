@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  color: #BF4080;
+  color: #333333;
   font-size: 3rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -29,7 +29,7 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: #BF4080;
+  color: #333333;
 }
 nav ul li a:hover, nav ul li a:focus {
   text-decoration: underline;
