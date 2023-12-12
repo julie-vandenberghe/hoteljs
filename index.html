@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/477e17b079.js" crossorigin="anonymous"></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js" type="module" defer></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Hôtel JS</title>
 </head>
 <body>
     <header>
-        <div><img src="./img/Logoblanc.png" alt=""></div>
+        <div class="logo-container"><img src="./img/Logoblanc.png" alt=""></div>
         <nav>
             <ul>
-                <li>Nouveau client</li>
-                <li>Départ client</li>
+                <li><a href="#newClient">Nouveau client</a></li>
+                <li><a href="#checkoutClient">Départ client</a></li>
             </ul>
         </nav>
     </header>
-    <section id="newClient">
-        <!-- Bannière accueil nouveau client -->
-        <!-- FORM accueil nouveau client -->
-        <h2>Accueil nouveau client</h2>
+    <div id="main"><section id="newClient">
+        <div class="banniere">
+            <img src="./img/Lille-Seminaires.jpg" alt="Banner Image">
+            <div class="banniere-contenu">
+                <h2>Accueil nouveau client</h2>
+            </div>
+        </div>
         <form id="formNewClient">
             <div>
                 <label for="prenom">Prénom</label><br>
@@ -55,20 +58,30 @@
         </form>
     </section>
     <section id="checkoutClient">
+        <div class="espace"></div>
         <!-- Bannière départ nouveau client -->
-        <!-- FORM départ nouveau client -->
-        <h2>Départ client</h2>
+        <div class="banniere">
+            <img src="./img/Lille-Hall.jpg" alt="Banner Image">
+            <div class="banniere-contenu">
+                <h2>Départ client</h2>
+            </div>
+        </div>
         <form id="formCheckoutClient">
            
                 <label for="prenom">Prénom</label><br>
-                <input type="text" id="prenom" name="prenom">
+                <input type="text" id="prenomRecherche" name="prenom">
             
             <div>
                 <label for="nom">Nom</label><br>
-                <input type="text" id="nom" name="nom">
+                <input type="text" id="nomRecherche" name="nom">
             </div>
             <button type="submit">Rechercher <i class="fa-solid fa-user"></i></i></button>
         </form>
+       
     </section>
+</div>
+<footer>
+    <div id="message"></div>
+</footer>
 </body>
 </html>
