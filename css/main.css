@@ -17,8 +17,70 @@ body {
   color: white;
 }
 
-nav ul {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+header .logo-container img {
+  width: 250px;
+  margin: 20px;
+}
+header nav ul {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+  display: flex;
+}
+header nav ul li {
+  margin-left: 20px;
+}
+
+#newClient,
+#checkoutClient {
+  position: relative;
+}
+#newClient .banniere,
+#checkoutClient .banniere {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+#newClient .banniere img,
+#checkoutClient .banniere img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#newClient .banniere .banniere-contenu,
+#checkoutClient .banniere .banniere-contenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #333333;
+}
+#newClient .banniere .banniere-contenu h2,
+#checkoutClient .banniere .banniere-contenu h2 {
+  font-size: 24px;
+  color: #333333;
+  text-decoration: underline #b89470;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+}
+
+.espace {
+  height: 250px;
+}
+
+footer {
   background-color: #b89470;
+  text-align: center;
+  padding: 20px;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
