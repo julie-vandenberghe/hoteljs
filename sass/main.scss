@@ -1,13 +1,82 @@
-//Importer les fichiers partiels
+// main.scss
 @use "reset";
 @use "variables" as v;
 
 body {
+    background-color: white;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     background-color: v.$color-primary;
-    color:white;
+
+    .logo-container {
+        img {
+            width: 250px;
+            margin: 20px;
+        }
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            margin: 20px;
+            padding: 0;
+            display: flex;
+
+            li {
+                margin-left: 20px;
+            }
+        }
+    }
 }
 
-nav ul {
+#newClient,
+#checkoutClient {
+    position: relative;
+
+    .banniere {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banniere-contenu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: v.$color-primary;
+
+            h2 {
+                font-size: 24px;
+                color: v.$color-primary;
+                text-decoration: underline v.$color-secondary;
+                background-color: rgba(255, 255, 255, 0.5);
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.espace {
+    height: 250px;
+}
+
+footer {
     background-color: v.$color-secondary;
+    text-align: center;
+    padding: 20px;
+    color: white;
 }
-
