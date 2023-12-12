@@ -6,7 +6,7 @@ import displayPrice from "./functions.js";
 
 // TRAITEMENT DU FORMULAIRE POUR AJOUTER UN CLIENT
 let form = document.getElementById("formNewClient");
-let clients = [];
+let clients = JSON.parse(window.localStorage.getItem('hotel.clients') || '[]');
 /* console.log(new FormData(form));
 let formData = new FormData(form);
 for (const pair of formData.entries()) {
@@ -22,14 +22,15 @@ form.addEventListener("submit", (e) => {
     let prix_chambre;
     let prix_petit_dej = 7;
     let total_petit_dej = 0;
-    if (chambre == "chambre-1")  {prix_chambre = 65}
-    else if (chambre == "chambre-2")  {prix_chambre = 89}
-    else if (chambre == "chambre-4")  {prix_chambre = 139}
-    else if (chambre == "loft")  {prix_chambre = 189}
+    if (chambre == "chambre-1") {prix_chambre = 65}
+    if (chambre == "chambre-2") {prix_chambre = 89}
+    if (chambre == "chambre-4") {prix_chambre = 139}
+    if (chambre == "loft") {prix_chambre = 189}
     if (petit_dej == 'oui') {total_petit_dej = prix_petit_dej * nuits}
     let total = (prix_chambre * nuits) + total_petit_dej; 
-    //clients.push(new Client(prenom, nom, nuits, chambre, petit_dej, total));
-    clients.push({prenom, nom, nuits, chambre, petit_dej, total});
+    clients.push(new Client(prenom, nom, nuits, chambre, petit_dej, total));
+    //clients.push({prenom, nom, nuits, chambre, petit_dej, total});
+    window.localStorage.setItem('hotel.clients', JSON.stringify(clients));
     console.log(clients);
 });
 
@@ -55,7 +56,10 @@ formCheckout.addEventListener("submit", (e) => {
         //main.appendChild(div);
         //body.insertAdjacentHTML(beforeend, div)
         document.getElementById('message').innerHTML = div;
-
+        clients = clients.filter(item => {
+            return (item.prenom !== prenomRecherche) && (item.nom  !== nomRecherche); //Permet de ne supprimer que le client qui fait son checkout. Si on enlève le !, cela supprime TOUUUUS les clients, sauf celui qui fait son checkout ^^'.
+        });
+        window.localStorage.setItem('hotel.clients', JSON.stringify(clients));
     }
     else {
         //console.log("❌ Client introuvable");
