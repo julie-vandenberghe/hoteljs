@@ -3,7 +3,7 @@
 @use "variables" as v;
 
 body {
-    background-color: v.$color-primary;
+    background-color: white;
     color: white;
 }
 
@@ -12,6 +12,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-color: v.$color-primary;
 
     .logo-container {
         img {

@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  background-color: #333333;
+  background-color: white;
   color: white;
 }
 
@@ -22,6 +22,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  background-color: #333333;
 }
 header .logo-container img {
   width: 250px;
