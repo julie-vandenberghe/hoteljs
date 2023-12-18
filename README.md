@@ -2,6 +2,9 @@
 
 Exercice done during M2i training.
 
+## Projects screenshots
+![image](https://github.com/julie-vandenberghe/hoteljs/assets/120843391/f68c755f-5225-45fa-b29e-2df28257054d)
+
 ## Languages used
 - HTML/CSS/Sass
 - JavaScript
