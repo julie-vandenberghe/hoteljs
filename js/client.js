@@ -1,14 +1,13 @@
 //CLASSE
 export default class Client {
     // Propriétés
-    constructor() { //id = 'CMD-'+Date.now()
-        //this.id = id;
-        this.prenom;
-        this.nom;
-        this.nuits;
-        this.chambre;
-        this.petit_dej;
-        this.total;
+    constructor(prenom, nom, nuits, chambre, petit_dej, total) { 
+        this.prenom = prenom;
+        this.nom = nom;
+        this.nuits = nuits;
+        this.chambre = chambre;
+        this.petit_dej = petit_dej;
+        this.total = total;
     }
 
 };

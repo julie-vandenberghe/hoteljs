@@ -38,6 +38,11 @@ header nav ul li {
   margin-left: 20px;
 }
 
+a, a:hover, a:focus, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
 #newClient,
 #checkoutClient {
   position: relative;
@@ -46,7 +51,7 @@ header nav ul li {
 #checkoutClient .banniere {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 300px;
   overflow: hidden;
 }
 #newClient .banniere img,
@@ -66,6 +71,7 @@ header nav ul li {
 }
 #newClient .banniere .banniere-contenu h2,
 #checkoutClient .banniere .banniere-contenu h2 {
+  font-family: "Cormorant Garamond", serif;
   font-size: 24px;
   color: #333333;
   text-decoration: underline #b89470;
@@ -82,6 +88,50 @@ footer {
   text-align: center;
   padding: 20px;
   color: white;
+}
+
+form {
+  color: white;
+  background-color: #333333;
+  margin: 20px;
+  padding: 20px;
+}
+@media screen and (min-width: 767px) {
+  form {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 150px;
+  }
+}
+form div {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 767px) {
+  form div {
+    flex-basis: 33%;
+    margin: 10px;
+  }
+}
+form input[type=text], form input[type=number], form select {
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+}
+form button {
+  color: white;
+  background-color: #b89470;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 767px) {
+  form button {
+    margin-top: 0;
+  }
+}
+
+div.container {
+  display: flex;
 }
 
 /*# sourceMappingURL=main.css.map */

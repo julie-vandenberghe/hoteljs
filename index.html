@@ -25,21 +25,21 @@
                 <h2>Accueil nouveau client</h2>
             </div>
         </div>
-        <form id="formNewClient">
+        <form id="formNewClient" autocomplete="off">
             <div>
-                <label for="prenom">Prénom</label><br>
+                <label for="prenom">Prénom</label>
                 <input type="text" id="prenom" name="prenom">
             </div> 
             <div>
-                <label for="nom">Nom</label><br>
+                <label for="nom">Nom</label>
                 <input type="text" id="nom" name="nom">
             </div>
             <div>
-                <label for="nuits">Nombre de nuits</label><br>
+                <label for="nuits">Nombre de nuits</label>
                 <input type="number" id="nuits" name="nuits" min="1" max="10">
             </div>
             <div>
-                <label for="chambre-select">Chambre</label><br>
+                <label for="chambre-select">Chambre</label>
                 <select name="chambres" id="chambre-select">
                     <option value="chambre-1">Chambre 1 personne</option>
                     <option value="chambre-2">Chambre 2 personnes</option>
@@ -48,36 +48,40 @@
                 </select>
             </div>
             <div>
-                <label>Petit déjeuner ?</label><br>
-                <input type="radio" id="oui" name="petit_dej" value="oui">
-                <label for="oui">Oui</label><br>
-                <input type="radio" id="non" name="petit_dej" value="non">
-                <label for="non">Non</label>
+                <label>Petit déjeuner ?</label>
+                <div class="container">
+                    <input type="radio" id="oui" name="petit_dej" value="oui">
+                    <label for="oui">Oui</label>
+                    <input type="radio" id="non" name="petit_dej" value="non">
+                    <label for="non">Non</label>
+                </div>
             </div>
-            <button type="submit">Enregistrer le client <i class="fa-solid fa-calendar"></i></button>
+            <div>
+                <button type="submit">Enregistrer le client <i class="fa-solid fa-calendar"></i></button>
+            </div>
         </form>
     </section>
     <section id="checkoutClient">
-        <div class="espace"></div>
-        <!-- Bannière départ nouveau client -->
         <div class="banniere">
             <img src="./img/Lille-Hall.jpg" alt="Banner Image">
             <div class="banniere-contenu">
                 <h2>Départ client</h2>
             </div>
         </div>
-        <form id="formCheckoutClient">
-           
-                <label for="prenom">Prénom</label><br>
-                <input type="text" id="prenomRecherche" name="prenom">
-            
-            <div>
-                <label for="nom">Nom</label><br>
-                <input type="text" id="nomRecherche" name="nom">
-            </div>
-            <button type="submit">Rechercher <i class="fa-solid fa-user"></i></i></button>
+        <form id="formCheckoutClient" autocomplete="off">
+    
+                <div>
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenomRecherche" name="prenom">
+                </div>
+                <div>
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nomRecherche" name="nom">
+                </div>
+                <div>
+                    <button type="submit">Rechercher <i class="fa-solid fa-user"></i></i></button>
+                </div>
         </form>
-       
     </section>
 </div>
 <footer>
